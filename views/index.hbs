@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+
+{{#if moths.length}}
+  <div class="moth-grid">
+    {{#each moths}}
+      <div class="moth-card">
+        <img src="{{this.imageUrl}}" alt="{{this.commonName}}" />
+        <div class="moth-info">
+          <h2>{{this.commonName}}</h2>
+          <p><em>{{this.scientificName}}</em></p>
+          <p><strong>Family:</strong> {{this.family}}</p>
+          <p><strong>Location:</strong> {{this.location}}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <p>No moths found 🐛</p>
+{{/if}}
+
